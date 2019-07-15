@@ -3,126 +3,22 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Database of Indigenous Slavery in the Americas</title>
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-		body {
-			margin: 0px;
-			font-family: roboto;
-		}
-		#intro {
-			height: 100vh;
-			padding-top: 100px;
-			background: #333;
-			color: white;
-			background: url(workers.jpg);
-			background-size: cover;
-			position: relative;
-		}
-		#intro > .intro-content {
-			background: rgba(0, 0, 0, .3);
-			position: absolute;
-			top: 0px;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		#intro .content {
-			max-width: 600px;
-			margin-top: -40px;
-			text-align: center;
-		}
-		#intro .content h1 {
-			font-size: 32pt;
-			margin: 0px;
-		}
-		#intro .content .subtitle {
-			font-size: 20pt;
-			font-weight: 100;
-			margin-top: 1em;
-			margin-bottom: 1.5em;
-		}
-		#home {
-		}
-		header {
-			color: white;
-			z-index: 10000;
-			position: fixed;
-			height: 75px;
-			top: 0px;
-			left: 0px;
-			width: 100%;
-			display: flex;
-			align-items: center;
-			padding-left: 20px;
-			padding-right: 20px;
-			background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
-			text-shadow: 0px 1px rgba(0, 0, 0, .3);
-		}
-		header > h1 {
-			margin-right: auto;
-		}
-		header > a {
-			vertical-align: middle;
-			color: white;
-			margin-left: 10px;
-			margin-right: 10px;
-			text-decoration: none;
-			border-bottom: 1px solid rgba(255, 255, 255, 0);
-			transition: all .2s linear;
-			font-size: 14pt;
-		}
-		header > a:hover {
-			border-bottom: 1px solid white;
-		}
-		header > button {
-			margin-left: auto;
-			height: 40px;
-		}
-		#premier-button {
-			background: white;
-			color: black;
-			border: 0px;
-			box-shadow: 0px 0px 1px 1px rgba(256, 256, 256, .5);
-			border-radius: 5px;
-			padding: 20px 40px 20px 40px;
-			font-size: 14pt;
-			transition: all .2s ease-in;
-		}
-		#premier-button:hover {
-			box-shadow: 0px 0px 3px 3px rgba(256, 256, 256, .5);
-		}
-		section {
-			box-sizing: border-box;
-			padding: 20px;
-		}
-		section .entry-content {
-			max-width: 800px;
-			margin: auto;
-		}
-		.narrow-container {
-			max-width: 800px;
-			margin: auto;
-		}
-		h2 {
-			max-width: 800px;
-			margin: auto;
-		}
 
-	</style>
+
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<header>
-		<h1>DISA</h1>
+		<h1><a href="#intro">DISA</a></h1>
+		<a href="" class="header-view-link">Go to the Database</a>
 		<a href="#about">About</a>
 		<a href="#people">People</a>
-		<a href="#contact">Contact</a>
 		<a href="#blog">Blog</a>
-		<a href="#contribute">Contribute</a>
+		<a href="#contribute">Participate</a>
+		<a href="#resources">Resources</a>
+		<a href="#contact">Contact</a>
 	</header>
 	<main>
 		<section id="intro">
@@ -130,10 +26,10 @@
 				<div class="content">
 					<h1>Database of Indigenous Slavery in the Americas</h1>
 					<div class="subtitle">
-					A nice sounding subtitle
+					Recovering the human stories and family connections of Native enslavement.
 					</div>
 					<div class="button-container">
-						<button id="premier-button">Go to Database</button>
+						<button id="premier-button">Explore</button>
 					</div>
 				</div>
 			</div>
@@ -193,7 +89,7 @@
 		</section>
 				<section id="blog">
 				<div class="narrow-container">
-		<h2>Latest Blog Entry</h2>
+		<h2 class="entry-title">Latest Blog Entry</h2>
 		<h3>DISA: a brief introduction and update </h3>
 		<p>Greetings, and thanks for visiting this site. The idea for a database that centralizes all known biographical information about known instances of indigenous slavery in the Americas has been percolating for some time. In 2015 I began to slowly apply for small amounts of funding internally here at Brown to take the first steps towards amassing data and building a website. I’m grateful that the Center for Digital Scholarship here at Brown has been willing to generously help out in terms of computer programming and tech support... [<a href="">Continue</a>]</p>
 		<p><a href="">View all Blog Posts</a></p>
@@ -201,12 +97,27 @@
 		</section>
 <section id="contribute">
 <div class="narrow-container">
-<h1 class="entry-title">Contribute</h1>
+<h1 class="entry-title">Participate</h1>
 	<div class="entry-content">
-		<p><strong>How to contribute:</strong></p>
+		<p><strong>How to Participate:</strong></p>
 <p>In this early phase, the database is not yet public. While we are working on funding, a small team of researchers is slowly adding to the database. You can contribute to this project by sending us any and all listings or spreadsheets of indigenous slaves that you have compiled in your own research. Please email them to: linford_fisher@brown.edu</p>
 		</div>
 		</section>
+<section id="resources">
+	<div class="entry-content">
+	<h1>Resources</h1>
+	<h2>Bibliography</h2>
+<p>Beckles, Hilary. <em>Caribbean Slavery in the Atlantic World</em>. Ian Randle Publishers, 1998.</p>
+<p>Bernhard, Virginia. <em>Slaves and Slaveholders in Bermuda, 1616-1782</em>. University of Missouri, 1999.</p>
+<p>Boissevain, Ethel. “Whatever Became of the New England Indians Shipped to Bermuda to Be Sold as Slaves?” <em>Man in the Northwest</em> 11 (Spring 1981): 103–114.</p>
+<p>Brooks, James. <em>Captives &amp; Cousins: Slavery, Kinship, and Community in the Southwest Borderlands</em>. Chapel Hill: University of North Carolina Press, 2002.</p>
+<p>Cave, Alfred A. <em>The Pequot War</em>. Amherst: University of Massachusetts Press, 1996.</p>
+<p>Carocci, Max. “Written Out of History: Contemporary Native American Narratives of Enslavement.” <em>Anthropology Today</em> 25, no. 3 (n.d.): 18–22.
+<a href="">Continue Reading</a>
+</div>
+</p>
+
+</section>
 <section id="contact">
 		<div class="narrow-container">
 		<h1 class="entry-title">Contact</h1>				<div class="entry-content">
@@ -243,9 +154,31 @@
 </div>
 </div>
 </section>
-
 	</main>
+	<footer>
+	<img src="disa-logo.png" width="150" alt="DISA Logo"/> 
+	<br>
+	on
+	<a href="">Tooter</a>,
+	<a href="">Spacebook</a>,
+	<a href="">Snapstagram</a>
+	</footer>
 <script>
+window.onscroll = () => {
+	var doc = document.documentElement;
+	let scroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+	let win_height = Math.max(
+		document.documentElement.clientHeight,
+		window.innerHeight || 0
+	);
+	let header = document.getElementsByTagName("header")[0];
+	if (scroll >= win_height) {
+		header.classList.add("header-black");
+	} else {
+		header.classList.remove("header-black");
+	}
+}
+
 let ee = (c, f) => {
 	let w = window; w[c] = 0;
 	document.addEventListener('keydown', (e) => {
