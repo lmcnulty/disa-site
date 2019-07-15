@@ -3,11 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <title>Database of Indigenous Slavery in The Americas</title>
+
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
 <style>
 	body, html {margin: 0px; height: 100%; position: relative;}
 	body {
 		background-color: whitesmoke;
-		font-family: sans-serif;
+		font-family: "Libre Franklin", sans-serif;
+		position: relative;
 	}
 	header {
 		position: fixed;
@@ -37,6 +40,8 @@
 	main {
 		position: absolute;
 		top: 55px;	
+		left: 0px;
+		right: 0px;
 	}
 	main section {
 		padding: 40px 110px 40px 110px;
@@ -50,15 +55,20 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: calc(100% - 220px);
 	}
 	main section a {
 		color: #46C9FF;
 	}
 
+	section {
+		width: 100%;
+	}
 	#goto-button {
 		margin-right: 10px;
 		margin-left: auto;
-		background: #6AD25B; /*#4C804C; /*#3BBC3B*/;
+		/*background: #6AD25B; *//*#4C804C; /*#3BBC3B*/;
+		background: #44C531;
 		color: white;
 		border: 0px;
 		border-radius: 5px;
@@ -73,7 +83,6 @@
 	.narrow-text-container {
 		max-width: 900px;
 		font-size: 15pt;
-		margin-top: -100px;
 	}
 	.floating-image-container {
 		max-width: 400px;
@@ -87,7 +96,14 @@
 		color: white;
 		padding: 4px;
 	}
+	header a {
+		text-decoration: none;
+	}
+	header a:hover {
+		color: grey;
+	}
 </style>
+
 </head>
 <body lang="en">
 	<header>
@@ -97,11 +113,11 @@
 		<a href="#contact">Contact</a>
 		<a href="#blog">Blog</a>
 		<a href="#contribute">Contribute</a>
-		<button id="goto-button">View DB</button>
+		<button id="goto-button">Explore</button>
 	</header>
 	<main>
 		<section id="home" style="position: relative; color: white; background-color: black;">
-			<div style="background: url('provinciae.png'); background-size: cover; background-position: center; background-color: black; filter: blur(4px) brightness(80%); position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;"></div>
+			<div style="background: url('provinciae.png'); background-size: cover; background-position: center; background-color: black; filter:  brightness(75%); position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;"></div>
 			<div class="section-container" style="z-index: 50; max-width: 900px; margin-top: -80px; font-size: 15pt; text-align: justify; hyphens: auto; /*background: rgba(0, 0, 0, .6); color: white; padding: 20px; margin-top: -80px; box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .3);  margin-left: -400px; max-width: 600px;*/">
 			<!--<div class="floating-image-container" style="float: left; margin-right: 40px;">
 				<img src="caribbean1.png">
@@ -118,6 +134,7 @@
 				<!--<div class="floating-image-container" style="float: right; margin-left: 40px;">
 				<img src="provinciae.png">-->
 			</div>
+			<div class="narrow-text-container">
 <p>The Database of Indigenous Slavery in the Americas (DISA), is a database that seeks to document as many instances of indigenous enslavement in the Americas between 1492 and 1900 (and beyond, where relevant).<strong>&nbsp;</strong>The hemispheric study of Native American slavery represents cutting-edge research in multi-lingual and multi-national contexts in the Americas. Scholars now estimate that between 2.5 and 5 million Natives were enslaved in the Americas between 1492 and the late nineteenth century – an astonishing number by any measure (even compared to the approximately 12 million Africans who were brought as slaves from Africa in this same time period). DISA will allow the slow centralization of biographical information related to enslaved indigenous people and place them online where historians, researchers, students, tribal members, and families can use the information to reconstruct histories, chart networks, and make connections in ways that have never before been possible.</p>
 <p><strong>Timeline:</strong></p>
 <p>We are currently applying for larger grants and hope to have a public-facing prototype in the summer of 2018.</p>
@@ -129,16 +146,19 @@
 <p style="padding-left: 30px;"><a href="https://www.brown.edu/initiatives/social-science-research/">Social Sciences Research Institute</a>, Brown University</p>
 <p style="padding-left: 30px;"><a href="https://www.brown.edu/research/conducting-research-brown/about-office">Office of the Vice President for Research</a>, Brown University</p>
 <p style="padding-left: 30px;"><a href="https://library.brown.edu/cds/">Center for Digital Scholarship</a>, Brown University Library</p></div>
+</div>
 		</section>
 		<section id="people" style="position: relative;">
-		<div style="background: url('caribbean1.png'); background-size: cover; filter: blur(7px) brightness(110%); position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 0;">
+		<div style="background: url('caribbean1.png'); background-size: cover; filter: brightness(60%); position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 0; color: white !important;">
 
 		</div>
-			<div style="color: black; z-index: 50;">
-<h2 class="entry-title">People</h2>
+			<div style="z-index: 50;">
 				
+			<div class="narrow-text-container">
+
 			<div class="entry-content">
-				<p>The Database of Indigenous Slavery in the Americas involves the following people.</p>
+
+<h2 class="entry-title">People</h2>
 <p><strong>Core team:</strong></p>
 <ul>
 <li><a href="https://vivo.brown.edu/display/lf7" target="_blank" rel="noopener">Linford D. Fisher</a>, Associate Professor of History, Brown University (Principal Investigator)</li>
@@ -168,6 +188,7 @@
 <li>Nancy van Deusen, Professor of History, Queen’s University (Ontario, Canada)</li>
 <li>Tall Oak Weeden, historian and activist, Wampanoag and Pequot</li>
 		</div>
+		</div>
 		</section>
 				<section id="blog">
 		<div class="narrow-text-container">
@@ -177,7 +198,7 @@
 		<p><a href="">View all Blog Posts</a></p>
 		</section>
 <section id="contribute" style="position: relative;">
-			<div style="background: url('workers.jpg'); background-size: cover; background-position: center; background-color: black; filter: blur(4px) brightness(80%); position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;"></div>
+			<div style="background: url('workers.jpg'); background-size: cover; background-position: center; background-color: black; filter: brightness(80%); position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;"></div>
 <div style="z-index: 50; max-width: 900px; font-size: 15pt; margin-top: -100px;">
 <h1 class="entry-title">Contribute</h1>			</header><!-- .entry-header -->
 	<div class="entry-content">
