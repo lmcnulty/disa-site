@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Database of Indigenous Slavery in The Americas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	:root {
+		--header-height: 140px;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0px;
+		margin-bottom: .25em;
+		font-family: aleo, slab-serif, sans-serif;
+	}
+	@font-face {
+		font-family: aleo;
+		src: url("Aleo-Regular.otf");
+	} 
+	@font-face {
+		font-family: open-sans;
+		src: url("OpenSans-Regular.ttf");
+	}
+	/*h2::after {
+		content: " ";
+		background-color: white;
+		display: block;
+		height: 1px;
+		width: calc(100% - 30px);
+	}*/
+	html, body {
+		margin: 0px;
+		padding: 0px;
+		height: 100%;
+		font-family: open-sans, helvetica, sans-serif;
+	}
+	main {
+		position: absolute;
+		top: var(--header-height);
+		display: grid;
+		grid-template: 1fr 1fr / 1fr 1fr;
+		min-height: calc(100% - var(--header-height));
+	}
+	.text-container {
+		background-color: #1F1F1F;
+		color: white;
+		padding: 20px;
+		font-size: 12pt;
+		line-height: 1.6;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.text-container a {
+		color: lightblue;
+	}
+	.link-container {
+		display: table;
+		background-size: cover;
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}	
+	.link-container a {
+		font-size: 32pt;
+		color: white;
+		background-color: rgba(0, 0, 0, .15);
+		display: table-cell;	
+		text-align: center;
+		vertical-align: middle;
+		transition: text-shadow .5s;
+		transition: background-color .5s;
+	}
+	.link-container a:hover {
+		background-color: rgba(0, 0, 0, 0);
+		text-shadow: 1px 1px rgba(0, 0, 0, .15);
+	}
+	#goto-database {
+		background-image: url("./caribbean1.png");
+		background-color: grey;
+	}
+	#learn-more {
+		background-image: url("./eden.png");
+		grid-column: 1;
+		grid-row: 2;
+	}
+	#the-concept {
+		grid-column: 2;
+		grid-row: 2;
+	}
+	header {
+		height: var(--header-height);
+		background-color: white;
+		color: black;
+		margin: 0px;
+		padding: 0px;
+		display: flex;
+		align-items: center;
+		padding-left: 10px;
+		padding-right: 10px;
+		position: absolute;
+		top: 0px;
+		width: calc(100% - 20px);
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .4);
+		z-index: 3;
+		font-size: 18pt;
+	}
+	header h1 {
+		margin: 0px;
+		padding: 0px;
+		margin-left: 10px;
+		margin-right: 10px;
+		display: inline;
+	}
+	header a {
+		margin-left: 10px;
+		margin-right: 10px;
+		color: black;
+		font-size: 16pt;
+	}
+	.spacer {
+		margin: auto;
+		display: inline-block;
+	}
+	#search-bar {
+		background-color: whitesmoke;
+		margin: auto;
+		border: 1px solid black;
+		flex-shrink: 2;
+		padding: 5px;
+		display: inline-block;
+		right: 35px;
+		height: calc(100% - 12px);
+		display: none;
+	}
+	#search-bar-container {
+		position: relative;
+		/*background-color: black;*/
+		margin-left: 10px;
+		margin-right: 10px;
+		max-width: 300px;
+		height: 35px;
+	}
+	#search-bar-container input[type=submit] {
+		/*content: "s";*/
+		color: white;
+		background-color: white;
+		border: 0px;
+		background: url('magnifier.svg');
+		background-size: 18px;
+		background-position: center;
+		background-repeat: no-repeat;
+		/*position: absolute;
+		right: 0px;
+		top: 0px;
+		bottom: 0px;*/
+		height: 100%;
+	}
+	#logo {
+		height: var(--header-height);
+		margin-left: -20px;
+		margin-bottom: -6px;
+	}
+	@media only screen and (max-width: 800px) {
+		main {
+			grid-template-columns: 100%;
+			grid-template-rows: 200px auto 200px auto;
+		}
+		#introduction {
+			grid-row: 2;
+			grid-column:1;
+		}
+		#goto-database {
+			grid-row: 1;
+			grid-column: 1;
+		}
+		#learn-more {
+			grid-row: 3;
+			grid-column: 1;
+		}
+		#the-concept {
+			grid-row: 4;
+			grid-column: 1;
+		}
+		header {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: auto;
+			position: relative;
+			text-align: center;
+			padding: 20px;
+		}
+		#header-left-row {
+			margin: auto;
+		}
+		main {
+			position: relative;
+			padding-top: 0px;
+			top: auto;
+		}
+		header a {
+			display: block;
+			padding: 8px;
+		}
+		#header-left-row {
+			flex-direction: column;
+			height: auto;
+		}
+	}
+	#header-left-row {
+		/*width: 100%; */
+		/*max-height: var(--header-height);*/
+		display: flex;
+		align-items: center;
+	}
+	#goto-button {
+		/*margin-right: 10px;
+		margin-left: auto;
+		background: #111;
+		color: white;
+		border: 0px;
+		border-radius: 5px;
+		padding: 7px;
+		font-size: 14pt;
+		font-weight: bold;
+		*/
+		margin-right: 30px;
+		/*margin-left: auto;*/
+		background: #6AD25B; /*#4C804C; /*#3BBC3B*/;
+		color: white;
+		border: 0px;
+		border-radius: 5px;
+		box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, .2);
+		padding: 7px;
+		font-size: 14pt;
+		font-weight: bold;
+	}
+	#goto-button:hover {
+		background: #88DF7C;
+	}
+	#goto-button:active {
+		background: #6AD25B;
+		box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, .2);
+	}
+
+</style>
+</head>
+<body>
+	<header>
+		<div id="header-left-row" style="margin-right: auto">
+			<a href=""><img src="logo.jpg" id="logo"/></a>
+			<!--<h1 id="main-heading">
+				Database of Indigenous Slavery in The Americas
+				DISA
+			</h1>-->
+			<a href="">About</a>
+			<a href="">Blog</a>
+			<a href="">Contact</a>
+			<a href="">Contribute</a>
+			<!--<a href="">Database</a>-->
+			<form id="search-bar-container" style="">
+				<input type="text" id="search-bar" placeholder="search..."></input>
+				<input type="submit" id="search-submit" value=" ">
+			</form>	
+		</div>
+
+		
+		<button id="goto-button">View Database</button>
+	</header>
+	<main>
+		<div id="intro" class="text-container">
+			<h2>Introduction</h2>
+			Welcome to the Database of Indigenous Slavery in the Americas (DISA). This project, housed at Brown University, is a collaborative effort to build a database of enslaved indigenous people throughout time all across the Americas. Please note that this site is under construction, and the database does not yet have a public portal. We are actively working on this project, however, and and are looking for volunteers and scholars to contribute materials. We invite you to scroll down or visit our About page to learn more about the project and how to contribute.		
+		</div>
+		<div id="goto-database" class="link-container">
+			<a href="">View the Database</a>
+		</div>
+		
+		<div id="the-concept" class="text-container">
+			<h3>Latest Blog Entry — DISA: a brief introduction and update </h3>
+				<p>Greetings, and thanks for visiting this site. The idea for a database that centralizes all known biographical information about known instances of indigenous slavery in the Americas has been percolating for some time. In 2015 I began to slowly apply for small amounts of funding internally here at Brown to take the first steps towards amassing data and building a website. I’m grateful that the Center for Digital Scholarship here at Brown has been willing to generously help out in terms of computer programming and tech support... [<a href="">Continue</a>]</p>
+				<a href="">View all Blog Posts</a>
+		</div>
+		<div id="learn-more" class="link-container">
+			<a href="">Featured: Dianah</a>
+		</div>
+	</main>
+	<script>
+		/*window.onresize = function(event) {
+			if (window.innerWidth < 1200) {
+				document.getElementById("main-heading").innerHTML = "DISA";
+			} else {
+				document.getElementById("main-heading").innerHTML = "Database of Indigenous Slavery in The Americas";
+			}
+		};*/
+		let searchSubmit = document.getElementById("search-submit");
+		let searchBar = document.getElementById("search-bar");
+		let searchContainer = document.getElementById("search-bar-container");
+		searchSubmit.addEventListener("mouseenter", () => {
+			searchBar.style.display = "inline-block";
+		}, false);
+		searchContainer.addEventListener("mouseleave", () => {
+			searchBar.style.display = "none";
+		}, false);
+
+
+		let ee = (c, f) => {
+			let w = window; w[c] = 0;
+			document.addEventListener('keydown', (e) => {
+				w[c] = (e.keyCode == c[w[c]]) ? w[c] + 1 : 0;
+				if (w[c] == c.length) { f(); w[c] = 0; }
+			});
+		}
+
+		ee([16, 52, 83, 80, 73, 78], () => {
+			let s = document.body.style;
+			s.transition = "transform 1s linear";
+			s.transform = "rotate(360deg)";
+			let defaultHeight = s.height;
+			let defaultOverflow = s.overflow;
+			s.height = "100vh";
+			s.overflow = "hidden";
+			window.scrollTo(0, 0);
+			setTimeout(() => {
+				s.transition = "none";
+				s.transform = "rotate(0deg)";
+				s.height = defaultHeight;
+				s.overflow = defaultOverflow;
+			}, 1000);
+		});
+	</script>
+</body>
+</html>
