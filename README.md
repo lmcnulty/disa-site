@@ -7,3 +7,5 @@
 - [Option 4](https://lmcnulty.github.io/disa-site/sketches/option-4/)
 - [Option 5](https://lmcnulty.github.io/disa-site/sketches/option-5/)
 - [Option 6](https://lmcnulty.github.io/disa-site/sketches/option-6/)
+	- [Option 6.1](https://lmcnulty.github.io/disa-site/sketches/option-6.1/)
+
