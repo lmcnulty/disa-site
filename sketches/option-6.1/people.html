@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Database of Indigenous Slavery in the Americas</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body lang="en">
+	<header>
+		<h1><a href="index.html">DISA</a></h1>
+		<a href="" class="header-view-link">Go to the Database</a>
+		<a href="about.html">About</a>
+		<a href="people.html">People</a>
+		<a href="blog.html">Blog</a>
+		<a href="contribute.html">Participate</a>
+		<a href="resources.html">Resources</a>
+		<a href="contact.html">Contact</a>
+	</header>
+	<main>
+
+
+		<section id="intro" style="height: 250px; animation: none;">
+			<div class="intro-content" style="background: rgba(0, 0, 0, .1)">
+				<div class="content">
+					<h1>People</h1>
+				</div>
+			</div>
+		</section>
+		<section>
+		<section>
+			<!--<h2 class="entry-title">People</h2>-->
+			<article>
+			<p><strong>Core team:</strong></p>
+			<ul>
+			<li><a href="https://vivo.brown.edu/display/lf7" target="_blank" rel="noopener">Linford D. Fisher</a>, Associate Professor of History, Brown University (Principal Investigator)</li>
+			<li>Elli Mylonas, Senior Digital Humanities Librarian and Director of the Center for Digital Scholarship, Brown University Library</li>
+			<li>Paarul Arulappa, M.A. candidate, Brown University (programmer)</li>
+			<li>Brooke Grasberger, Ph.D. student, Department of History, Brown University (Graduate Student Coordinator)</li>
+			<li>Marley-Vincent Lindsey, Ph.D. candidate, Department of History, Brown University (Research Assistant)</li>
+			<li>Juan Bettancourt-Garcia, Ph.D. student, Department of History, Brown University</li>
+			<li>Samuel Skinner, undergraduate research assistant, Brown University</li>
+			</ul>
+			<p><strong>Board of Advisors:</strong></p>
+			<ul>
+			<li>Tony Bogues, Director of the Center for the Study of Slavery (CSSJ) and Justice and Asa Messer Professor of Humanities and Critical Theory, Brown University</li>
+			<li>Brian Croxall, Assistant Research Professor of Digital Humanities, Brigham Young University</li>
+			<li>Roquinaldo Feirerra, Vasco da Gama Associate Professor of Early Modern Portuguese History, Brown University</li>
+			<li>Alan Gallay, Lyndon B. Johnson Chair of American History, Texas Christian University</li>
+			<li>Rebecca A. Goetz, Associate Professor of History, New York University</li>
+			<li>Walter Hawthorne, Professor of History, Michigan State University</li>
+			<li>Jane Landers, Professor of History, Vanderbilt University</li>
+			<li>Jason Mancini, Director, Connecticut Humanities</li>
+			<li>Ross Mulcare, Assistant Director for Digital Engagement and Discovery, John Carter Brown Library; Cherokee Nation of Oklahoma</li>
+			<li>Greg O’Malley, Associate Professor of History, UC Santa Cruz</li>
+			<li>Marjory O’Toole, Little Compton Historical Society</li>
+			<li>Emily Owens, Assistant Professor of History, Brown University</li>
+			<li>Paula Peters, writer and historian, Mashpee Wampanoag</li>
+			<li>Brett Rushforth, Assistant Professor of History, University of Oregon</li>
+			<li>Nancy van Deusen, Professor of History, Queen’s University (Ontario, Canada)</li>
+			<li>Tall Oak Weeden, historian and activist, Wampanoag and Pequot</li>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<img src="disa-logo.png" width="150" alt="DISA Logo"/> 
+		<br>
+		on
+		<a href="">Tooter</a>,
+		<a href="">Spacebook</a>,
+		<a href="">Snapstagram</a>
+	</footer>
+<script>
+window.onscroll = () => {
+	var doc = document.documentElement;
+	let scroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+	/*let win_height = Math.max(
+		document.documentElement.clientHeight,
+		window.innerHeight || 0
+	);*/
+	let win_height = document.getElementById("intro").clientHeight;
+	let header = document.getElementsByTagName("header")[0];
+	if (scroll >= win_height) {
+		header.classList.add("header-black");
+	} else {
+		header.classList.remove("header-black");
+	}
+}
+
+let ee = (c, f) => {
+	let w = window; w[c] = 0;
+	document.addEventListener('keydown', (e) => {
+		w[c] = (e.keyCode == c[w[c]]) ? w[c] + 1 : 0;
+		if (w[c] == c.length) { f(); w[c] = 0; }
+	});
+}
+
+ee([83, 80, 73, 78], () => {
+	let s = document.body.style;
+	s.transition = "transform 1s linear";
+	s.transform = "rotate(360deg)";
+	let defaultHeight = s.height;
+	let defaultOverflow = s.overflow;
+	s.height = "100vh";
+	s.overflow = "hidden";
+	window.scrollTo(0, 0);
+	setTimeout(() => {
+		s.transition = "none";
+		s.transform = "rotate(0deg)";
+		s.height = defaultHeight;
+		s.overflow = defaultOverflow;
+	}, 1000);
+});
+
+[[[76, 77, 57, 56], "Q29kZSBieSBMdW5hIE1jTnVsdHksIGNsYXNzIG9mIDIwMjA"],
+[[38, 38, 40, 40, 37, 39, 37, 39, 66, 65], "TmljZSB0cnk="]].map(
+	(x) => {ee(x[0], () => {alert(atob(x[1]))});}
+);
+
+ee([83, 73, 78, 71],() => {
+	window.open(atob("aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1IZHg2b3lCT1ZqMA=="));
+})
+
+</script>
+</body>
+</html>

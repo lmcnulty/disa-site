@@ -21,38 +21,23 @@
 		<a href="contact.html">Contact</a>
 	</header>
 	<main>
-		<section id="intro">
-			<div class="intro-content">
+		<section id="intro" style="height: 250px; animation: none;">
+			<div class="intro-content" style="background-color: rgba(0, 0, 0, .1)">
 				<div class="content">
-					<h1>Database of Indigenous Slavery in the Americas</h1>
-					<div class="subtitle">
-					Recovering the human stories and family connections of Native enslavement.
-					</div>
-					<div class="button-container">
-						<button id="premier-button">Explore</button>
-					</div>
+					<h1>Blog</h1>
 				</div>
 			</div>
 		</section>
 		<section>
 			<div class="card">
 				<div class="text">
-					<h2>Lorem Ipsum</h2>	
+					<h2><a href="">DISA: a brief introduction and update</a></h2>
 					
-					<p>Aspernatur quod autem fuga laudantium. Sed exercitationem iusto consequatur qui. Voluptatem inventore non nobis explicabo. Quidem ad impedit a ipsa aut. Aut nisi ex reiciendis nihil. Reiciendis nemo iusto repellat qui.</p>
+					<p>	
+					Greetings, and thanks for visiting this site. The idea for a database that centralizes all known biographical information about known instances of indigenous slavery in the Americas has been percolating for some time. In 2015…</p>
 
 				</div>
 				<div class="image" style="background-image: url('caribbean1.png')"></div>
-			</div>	
-
-			<div class="card" style="flex-direction: row-reverse;">
-				<div class="text">
-					<h2>Lorem Ipsum</h2>	
-					
-					<p>Aspernatur quod autem fuga laudantium. Sed exercitationem iusto consequatur qui. Voluptatem inventore non nobis explicabo. Quidem ad impedit a ipsa aut. Aut nisi ex reiciendis nihil. Reiciendis nemo iusto repellat qui.</p>
-
-				</div>
-				<div class="image" style="background-image: url('provinciae.png')"></div>
 			</div>	
 
 			<div class="card">
@@ -78,10 +63,12 @@
 window.onscroll = () => {
 	var doc = document.documentElement;
 	let scroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-	let win_height = Math.max(
+	/*let win_height = Math.max(
 		document.documentElement.clientHeight,
 		window.innerHeight || 0
-	);
+	);*/
+
+	let win_height = document.getElementById("intro").clientHeight;
 	let header = document.getElementsByTagName("header")[0];
 	if (scroll >= win_height) {
 		header.classList.add("header-black");

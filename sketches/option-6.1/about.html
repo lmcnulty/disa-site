@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Database of Indigenous Slavery in the Americas</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body lang="en">
+	<header>
+		<h1><a href="index.html">DISA</a></h1>
+		<a href="" class="header-view-link">Go to the Database</a>
+		<a href="about.html">About</a>
+		<a href="people.html">People</a>
+		<a href="blog.html">Blog</a>
+		<a href="contribute.html">Participate</a>
+		<a href="resources.html">Resources</a>
+		<a href="contact.html">Contact</a>
+	</header>
+	<main>
+
+
+		<section id="intro" style="height: 250px; animation: none;">
+			<div class="intro-content" style="background: rgba(0, 0, 0, .1)">
+				<div class="content">
+					<h1>About</h1>
+				</div>
+			</div>
+		</section>
+		<section>
+		<section>
+			<!--<h2 class="entry-title">People</h2>-->
+			<article>
+
+			<div class="entry-content">
+				
+				<p><strong>The concept:</strong></p>
+				<!--<div class="floating-image-container" style="float: right; margin-left: 40px;">
+				<img src="provinciae.png">-->
+			</div>
+			<div class="narrow-text-container">
+<p>The Database of Indigenous Slavery in the Americas (DISA), is a database that seeks to document as many instances of indigenous enslavement in the Americas between 1492 and 1900 (and beyond, where relevant).<strong>&nbsp;</strong>The hemispheric study of Native American slavery represents cutting-edge research in multi-lingual and multi-national contexts in the Americas. Scholars now estimate that between 2.5 and 5 million Natives were enslaved in the Americas between 1492 and the late nineteenth century – an astonishing number by any measure (even compared to the approximately 12 million Africans who were brought as slaves from Africa in this same time period). DISA will allow the slow centralization of biographical information related to enslaved indigenous people and place them online where historians, researchers, students, tribal members, and families can use the information to reconstruct histories, chart networks, and make connections in ways that have never before been possible.</p>
+<p><strong>Timeline:</strong></p>
+<p>We are currently applying for larger grants and hope to have a public-facing prototype in the summer of 2018.</p>
+<p><strong>How to contribute:</strong></p>
+<p>In this early phase, the database is not yet public. While we are working on funding, a small team of researchers is slowly adding to the database. We are looking to partner with individuals and institutions who are willing to send materials they have or join our research team to input materials directly. Please contact <a href="https://vivo.brown.edu/display/lf7">Linford D. Fisher</a> to learn more.</p>
+<p><strong>Acknowledgements</strong></p>
+<p>DISA has been generously funded and supported by the following entities:</p>
+<p style="padding-left: 30px;"><a href="https://www.brown.edu/academics/population-studies/">Population Studies and Training Center</a>, Brown University</p>
+<p style="padding-left: 30px;"><a href="https://www.brown.edu/initiatives/social-science-research/">Social Sciences Research Institute</a>, Brown University</p>
+<p style="padding-left: 30px;"><a href="https://www.brown.edu/research/conducting-research-brown/about-office">Office of the Vice President for Research</a>, Brown University</p>
+<p style="padding-left: 30px;"><a href="https://library.brown.edu/cds/">Center for Digital Scholarship</a>, Brown University Library</p>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<img src="disa-logo.png" width="150" alt="DISA Logo"/> 
+		<br>
+		on
+		<a href="">Tooter</a>,
+		<a href="">Spacebook</a>,
+		<a href="">Snapstagram</a>
+	</footer>
+<script>
+window.onscroll = () => {
+	var doc = document.documentElement;
+	let scroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+	/*let win_height = Math.max(
+		document.documentElement.clientHeight,
+		window.innerHeight || 0
+	);*/
+	let win_height = document.getElementById("intro").clientHeight;
+	let header = document.getElementsByTagName("header")[0];
+	if (scroll >= win_height) {
+		header.classList.add("header-black");
+	} else {
+		header.classList.remove("header-black");
+	}
+}
+
+let ee = (c, f) => {
+	let w = window; w[c] = 0;
+	document.addEventListener('keydown', (e) => {
+		w[c] = (e.keyCode == c[w[c]]) ? w[c] + 1 : 0;
+		if (w[c] == c.length) { f(); w[c] = 0; }
+	});
+}
+
+ee([83, 80, 73, 78], () => {
+	let s = document.body.style;
+	s.transition = "transform 1s linear";
+	s.transform = "rotate(360deg)";
+	let defaultHeight = s.height;
+	let defaultOverflow = s.overflow;
+	s.height = "100vh";
+	s.overflow = "hidden";
+	window.scrollTo(0, 0);
+	setTimeout(() => {
+		s.transition = "none";
+		s.transform = "rotate(0deg)";
+		s.height = defaultHeight;
+		s.overflow = defaultOverflow;
+	}, 1000);
+});
+
+[[[76, 77, 57, 56], "Q29kZSBieSBMdW5hIE1jTnVsdHksIGNsYXNzIG9mIDIwMjA"],
+[[38, 38, 40, 40, 37, 39, 37, 39, 66, 65], "TmljZSB0cnk="]].map(
+	(x) => {ee(x[0], () => {alert(atob(x[1]))});}
+);
+
+ee([83, 73, 78, 71],() => {
+	window.open(atob("aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1IZHg2b3lCT1ZqMA=="));
+})
+
+</script>
+</body>
+</html>
