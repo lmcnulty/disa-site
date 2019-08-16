@@ -57,7 +57,10 @@
 <p style="padding-left: 30px;"><a href="https://library.brown.edu/cds/">Center for Digital Scholarship</a>, Brown University Library</p>
 		
 		
+<figure>
 <img src="provinciae.png" class="deco"/>
+<figcaption><em>The Bros Meeting The Dudes</em>. Felicio Hernandez. c. 1521</figcaption>
+</figure>
 		</section>
 
 		<section id="people">
@@ -100,14 +103,21 @@
 		</section>
 				<section id="blog">
 				<div class="narrow-container">
+
+		<figure>
+			<img src="caribbean1.png" class="deco"/>
+			<figcaption><em>Untitled</em>. Anonymous. c. 1670</figcaption>
+		</figure>
 		<h2 class="entry-title">Latest Blog Entry</h2>
 		<h3>DISA: a brief introduction and update </h3>
 		<p>Greetings, and thanks for visiting this site. The idea for a database that centralizes all known biographical information about known instances of indigenous slavery in the Americas has been percolating for some time. In 2015 I began to slowly apply for small amounts of funding internally here at Brown to take the first steps towards amassing data and building a website. I’m grateful that the Center for Digital Scholarship here at Brown has been willing to generously help out in terms of computer programming and tech support... [<a href="">Continue</a>]</p>
 		<p><a href="">View all Blog Posts</a></p>
 		</div>
 		</section>
+
 <section id="contribute">
 <div class="narrow-container">
+
 <h2 class="entry-title">Participate</h2>
 	<div class="entry-content">
 		<p><strong>How to Participate:</strong></p>
@@ -177,6 +187,19 @@
 	<a href="">Snapstagram</a>
 	</footer>
 <script>
+for (figure of document.getElementsByTagName('figure')) {
+	figure.addEventListener('click', (evt) => {
+		el = evt.target;
+		if (evt.target.tagName != 'FIGURE') {
+			el = evt.target.parentNode;	
+		}
+		if (el.classList.contains('expanded')) {
+			el.classList.remove('expanded');
+		} else {
+			el.classList.add('expanded');
+		}
+	}, false);
+}
 window.onscroll = () => {
 	var doc = document.documentElement;
 	let scroll = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
